@@ -7,12 +7,10 @@ const NewRepositoryModal = ({ onClose, onCreate }) => {
 
   const handleCreate = async () => {
     try {
-      // Perform validation
       if (!repoName.trim()) {
         throw new Error('Repository name cannot be empty');
       }
   
-      // Call the onCreate callback to create the repository
       await onCreate(repoName);
       onClose();
     } catch (error) {
@@ -21,10 +19,6 @@ const NewRepositoryModal = ({ onClose, onCreate }) => {
     }
   };
   
-  const handleCloseAlert = () => {
-    setError('');
-  };
-
   return (
     <Box
       position="fixed"
