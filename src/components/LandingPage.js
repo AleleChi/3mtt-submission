@@ -16,7 +16,7 @@ const LandingPage = () => {
       p={8}
       backgroundImage="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
       borderRadius="md"
-      height="100vh" // Set height to 100vh to cover the entire viewport
+      height="100vh" 
       display="flex"
       flexDirection="column"
       justifyContent="center"

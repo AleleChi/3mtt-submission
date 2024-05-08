@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Box, Button, Flex } from '@chakra-ui/react'; // Import Chakra UI components
+import { Box, Button, Flex } from '@chakra-ui/react'; 
 import RepositoryList from './components/RepositoryList';
 import RepositoryDetail from './components/RepositoryDetail';
 import NotFoundPage from './components/NotFoundPage';

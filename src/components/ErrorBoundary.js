@@ -18,7 +18,7 @@ class ErrorBoundary extends Component {
   render() {
     if (this.state.hasError) {
       return (
-        <Box bg="red.200" p={4} borderRadius="md"> {/* Add background color, padding, and border radius */}
+        <Box bg="red.200" p={4} borderRadius="md"> 
           <h1>Something went wrong. Please try again later.</h1>
         </Box>
       );

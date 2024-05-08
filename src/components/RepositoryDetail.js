@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Box, Text, Spinner, Alert, AlertIcon } from '@chakra-ui/react'; // Import Chakra UI components
+import { Box, Text, Spinner, Alert, AlertIcon, Link } from '@chakra-ui/react'; // Import Chakra UI components
 
 const RepositoryDetail = () => {
   const { repoName } = useParams();
@@ -53,16 +53,23 @@ const RepositoryDetail = () => {
     );
   }
 
-  // Provide default values if description or stars are not available
   const description = repository.description || 'No description available';
   const stars = repository.stargazers_count || 0;
+  const forks = repository.forks || 0;
+  const language = repository.language || 'Unknown';
+  const repoUrl = repository.html_url;
 
   return (
     <Box p={4}>
       <Text fontSize="2xl" fontWeight="bold">{repository.name}</Text>
       <Text fontSize="lg" mt={2}>Description: {description}</Text>
       <Text fontSize="lg" mt={2}>Stars: {stars}</Text>
-      {/* Add more details as needed */}
+      <Text fontSize="lg" mt={2}>Forks: {forks}</Text>
+      <Text fontSize="lg" mt={2}>Language: {language}</Text>
+      <Text fontSize="lg" mt={2}>
+        Repository URL: <Link href={repoUrl} isExternal>{repoUrl}</Link>
+      </Text>
+      
     </Box>
   );
 };
